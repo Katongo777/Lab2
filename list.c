@@ -86,8 +86,7 @@ void pushCurrent(List * list, void * data) {
     }
     else if (current == NULL)
     { 
-        list->head = newNode;
-        list->tail = newNode;
+        return;
     }
     else
     {
