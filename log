@@ -134,3 +134,15 @@ Fri Mar 27 09:14:53 PM UTC 2026:
  1 file changed, 4 insertions(+), 4 deletions(-)
  tests:  0|0
 fcc928e
+Fri Mar 27 09:16:05 PM UTC 2026: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:58:9: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   58 |     if (current->next == NULL) return NULL;
+      |         ^~~~~~~
+      |         popCurrent
+list.c:58:9: note: each undeclared identifier is reported only once for each function it appears in
+f762837
