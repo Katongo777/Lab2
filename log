@@ -80,3 +80,22 @@ Fri Mar 27 09:05:29 PM UTC 2026:
  tests:  2|4
 total_score: 20/60
 e6f2f79
+Fri Mar 27 09:06:20 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:6: error: expected expression before ‘List’
+   38 |     *List newList = (List *)malloc(sizeof(List));
+      |      ^~~~
+list.c:39:5: error: ‘newList’ undeclared (first use in this function); did you mean ‘nextList’?
+   39 |     newList->head = NULL;
+      |     ^~~~~~~
+      |     nextList
+list.c:39:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:44:1: error: control reaches end of non-void function [-Werror=return-type]
+   44 | }
+      | ^
+cc1: all warnings being treated as errors
+1b7c3e2
