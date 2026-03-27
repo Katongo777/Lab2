@@ -109,3 +109,23 @@ Fri Mar 27 09:09:07 PM UTC 2026:
  tests:  2|4
 total_score: 20/60
 84fc64a
+Fri Mar 27 09:14:03 PM UTC 2026: 
+ list.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:51:19: error: expected expression before ‘List’
+   51 |     void * data = List->head->data;
+      |                   ^~~~
+list.c:52:9: error: expected identifier or ‘(’ before ‘->’ token
+   52 |     List->current = List->head;
+      |         ^~
+list.c: In function ‘nextList’:
+list.c:57:9: error: expected identifier or ‘(’ before ‘->’ token
+   57 |     List->current = List->current->next;
+      |         ^~
+list.c:58:19: error: expected expression before ‘List’
+   58 |     void * data = List->current;
+      |                   ^~~~
+061d353
