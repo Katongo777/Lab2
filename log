@@ -157,3 +157,23 @@ Fri Mar 27 09:21:03 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 60db132
+Fri Mar 27 09:21:38 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:51:29: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   51 |     if (list->head == NULL) return;
+      |                             ^~~~~~
+list.c:50:8: note: declared here
+   50 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+list.c: In function ‘nextList’:
+list.c:58:38: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   58 |     if (list->current->next == NULL) return;
+      |                                      ^~~~~~
+list.c:57:8: note: declared here
+   57 | void * nextList(List * list) {
+      |        ^~~~~~~~
+80f2252
