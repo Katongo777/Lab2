@@ -237,3 +237,13 @@ list.c:148:23: error: statement with no effect [-Werror=unused-value]
       |                       ^
 cc1: all warnings being treated as errors
 46ae4a5
+Fri Mar 27 10:02:24 PM UTC 2026: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:144:5: error: ‘else’ without a previous ‘if’
+  144 |     else if (elim == list->head && elim == list->tail) // SI ES EL UNICO NODO EN LA LISTA
+      |     ^~~~
+4024a13

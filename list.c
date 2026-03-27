@@ -139,13 +139,13 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     Node *elim = list->current;
-    if (elim == NULL) return;
+    if (elim == NULL) return NULL;
     void *data = elim->data;
     else if (elim == list->head && elim == list->tail) // SI ES EL UNICO NODO EN LA LISTA
     {
-        list->head == NULL;
-        list->tail == NULL;
-        list->current == NULL;
+        list->head = NULL;
+        list->tail = NULL;
+        list->current = NULL;
     }
     else if (elim->next == NULL) // SI ES EL ULTIMO NODO EN LA LISTA
     {
