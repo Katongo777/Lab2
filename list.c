@@ -49,7 +49,7 @@ List * createList() {
 
 void * firstList(List * list) {
     if (list->head == NULL) return NULL;
-    void * data = list->head->data;
+    void *data = list->head->data;
     list->current = list->head;
     return data;
 }
@@ -68,14 +68,14 @@ void * nextList(List * list) {
 void * lastList(List * list) {
     if (list->tail == NULL) return NULL;
     list->current = list->tail;
-    void * data = list->tail->data;
+    void *data = list->tail->data;
     return data;
 }
 
 void * prevList(List * list) {
     if (list->current == NULL || list->current->prev == NULL) return NULL;
     list->current = list->current->prev;
-    void * data = list->current->data;
+    void *data = list->current->data;
     return data;
 }
 
@@ -138,7 +138,34 @@ void * popBack(List * list) {
 // Nota: El current debe quedar apuntando al nodo siguiente del eliminado.
 
 void * popCurrent(List * list) {
-    return NULL;
+    Node *elim = list->current;
+    if (elim == NULL) return;
+    void *data = elim->data;
+    else if (elim == list->head && elim == list->tail) // SI ES EL UNICO NODO EN LA LISTA
+    {
+        list->head == NULL;
+        list->tail == NULL;
+        list->current == NULL;
+    }
+    else if (elim->next == NULL) // SI ES EL ULTIMO NODO EN LA LISTA
+    {
+        elim->prev->next = NULL;
+        list->current = NULL;
+    }
+    else if (elim->prev == NULL) // SI ES EL PRIMER NODO EN LA LISTA
+    {
+        list->head = elim->next;
+        list->head->prev = NULL;
+        list->current = list->head;
+    }
+    else
+    {
+        elim->prev->next = elim->next;
+        elim->next->prev = elim->prev;
+        list->current = elim->next;
+    }
+    free(elim);
+    return data;
 }
 
 void cleanList(List * list) {
