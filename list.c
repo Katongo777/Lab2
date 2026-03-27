@@ -151,6 +151,7 @@ void * popCurrent(List * list) {
     {
         elim->prev->next = NULL;
         list->current = NULL;
+        list->tail = elim->prev;
     }
     else if (elim->prev == NULL) // SI ES EL PRIMER NODO EN LA LISTA
     {
