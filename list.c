@@ -141,7 +141,7 @@ void * popCurrent(List * list) {
     Node *elim = list->current;
     if (elim == NULL) return NULL;
     void *data = elim->data;
-    else if (elim == list->head && elim == list->tail) // SI ES EL UNICO NODO EN LA LISTA
+    if (elim == list->head && elim == list->tail) // SI ES EL UNICO NODO EN LA LISTA
     {
         list->head = NULL;
         list->tail = NULL;

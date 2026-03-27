@@ -247,3 +247,9 @@ list.c:144:5: error: ‘else’ without a previous ‘if’
   144 |     else if (elim == list->head && elim == list->tail) // SI ES EL UNICO NODO EN LA LISTA
       |     ^~~~
 4024a13
+Fri Mar 27 10:02:46 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|1
+total_score: 50/60
+0d9a11a
